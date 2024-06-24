@@ -1,0 +1,45 @@
+%% Преамбула TeX-файла
+%% 1. Стиль и язык
+\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\usepackage{cmap}
+\usepackage{verbatim}
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8  
+\usepackage[russian]{babel}
+
+
+
+% Остальные стандартные настройки убраны в preamble.inc.tex.
+\include{10-preamble}
+\usepackage{epstopdf}
+\begin{document}
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+\include{11-title-page}
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\clearpage
+
+\include{2-intro}
+
+\mainmatter
+
+\include{theory-base-0}
+\include{theory-bpf-0}
+\include{theory-lsm-0}
+\include{scheme}
+
+\include{3-hook-def}
+
+\include{4-program}
+\include{4-program-main}
+\include{4-program-bpf}
+
+\backmatter
+\include{5-biblio}
+
+\appendix   % Тут идут приложения
+
+
+\end{document}

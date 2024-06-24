@@ -1,0 +1,5 @@
+config SECURITY_BPF_CONTROL
+bool "bpf_control security module"
+      default y
+help
+      Any help text here
